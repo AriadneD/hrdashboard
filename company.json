@@ -1,0 +1,113 @@
+{
+    "organization_info": {
+        "company_size": 500,
+        "industry": "Investment Bank",
+        "location": "New York"
+    },
+    "annual_costs": {
+        "wellness_program_total_costs": 100000,
+        "eap_costs": 10000,
+        "turnover_costs": 15800000,
+        "absenteeism_cost": 1800000,
+        "mental_health_claims_cost": 500000,
+        "health_insurance_claims_related_to_stress_cost": 500000
+    },
+    "monthly_data": [
+        {
+            "month": "January 2024",
+            "wellness_usage_rates": {
+                "health_plus_app": 15,
+                "wellness_programs": 34,
+                "eap": 27
+            },
+            "retention_rates": {
+                "turnover_rate": 19.63,
+                "absenteeism_rate": 3.84
+            },
+            "medical_claims": {
+                "mental_health_claims": 11.21,
+                "health_insurance_claims_related_to_stress": 9.15
+            }
+        },
+        {
+            "month": "February 2024",
+            "wellness_usage_rates": {
+                "health_plus_app": 16,
+                "wellness_programs": 40,
+                "eap": 30
+            },
+            "retention_rates": {
+                "turnover_rate": 14.26,
+                "absenteeism_rate": 4.44
+            },
+            "medical_claims": {
+                "mental_health_claims": 8.46,
+                "health_insurance_claims_related_to_stress": 7.54
+            }
+        },
+        {
+            "month": "March 2024",
+            "wellness_usage_rates": {
+                "health_plus_app": 38,
+                "wellness_programs": 34,
+                "eap": 28
+            },
+            "retention_rates": {
+                "turnover_rate": 14.94,
+                "absenteeism_rate": 2.71
+            },
+            "medical_claims": {
+                "mental_health_claims": 13.92,
+                "health_insurance_claims_related_to_stress": 14.64
+            }
+        },
+        {
+            "month": "April 2024",
+            "wellness_usage_rates": {
+                "health_plus_app": 29,
+                "wellness_programs": 36,
+                "eap": 23
+            },
+            "retention_rates": {
+                "turnover_rate": 16.13,
+                "absenteeism_rate": 2.07
+            },
+            "medical_claims": {
+                "mental_health_claims": 14.81,
+                "health_insurance_claims_related_to_stress": 6.81
+            }
+        },
+        {
+            "month": "May 2024",
+            "wellness_usage_rates": {
+                "health_plus_app": 23,
+                "wellness_programs": 1,
+                "eap": 12
+            },
+            "retention_rates": {
+                "turnover_rate": 14.63,
+                "absenteeism_rate": 3.95
+            },
+            "medical_claims": {
+                "mental_health_claims": 11.76,
+                "health_insurance_claims_related_to_stress": 12.49
+            }
+        },
+        {
+            "month": "June 2024",
+            "wellness_usage_rates": {
+                "health_plus_app": 43,
+                "wellness_programs": 22,
+                "eap": 37
+            },
+            "retention_rates": {
+                "turnover_rate": 14.52,
+                "absenteeism_rate": 3.05
+            },
+            "medical_claims": {
+                "mental_health_claims": 8.48,
+                "health_insurance_claims_related_to_stress": 8.16
+            }
+        }
+    ]
+}

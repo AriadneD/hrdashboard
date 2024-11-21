@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Our Data</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">health<span style="color: var(--primary-color);">+</span></div>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Generate AI Report</a></li>
+                <li><a href="/detail.html">Visual Mode</a></li>
+                <li><a href="/our-data.html">Our Data</a></li>
+                <li><a href="https://healthplus.global" class="join-button">Back to Main Site</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i>
+        </div>
+    </header>
+
+    <div class="about-data-container">
+        <h1>About Our Data</h1>
+        <p>Learn more about the categories, data streams, and insights behind our wellness reports.</p>
+        
+
+        <!-- Section 1: What's Novel -->
+        <div class="section-card">
+            <i class="fas fa-chart-bar" style="color: #007BFF;"></i>
+            <h2>What’s Novel About Health+ HR Dashboard</h2>
+            <p>The Health+ HR Dashboard is revolutionizing wellness analytics by integrating an unprecedented number of data streams into a single, actionable interface. Unlike traditional platforms, we utilize not only self-reported data but also passive data streams and digital phenotyping to provide a deeper, more accurate understanding of employee well-being. By capturing insights across multiple dimensions—physical activity, stress levels, sleep quality, and even workplace behaviors—our platform empowers HR professionals to make informed, impactful decisions.</p>
+            <p>What sets Health+ apart is our ability to bridge the gap between data and action. Our innovative use of passive data ensures minimal burden on employees while delivering real-time analytics. The inclusion of digital phenotyping allows us to detect subtle patterns and trends that might otherwise go unnoticed, ensuring that signs of burnout or stress are caught early. This holistic approach means no blind spots, just actionable insights tailored to your workforce's unique needs.</p>
+        </div>
+
+        <!-- Section 2: Digital Phenotyping -->
+        <div class="section-card">
+            <i class="fas fa-brain" style="color: #FFC107;"></i>
+            <h2>What Is Digital Phenotyping and How It Helps with Burnout</h2>
+            <p>Digital phenotyping is the continuous collection of data from everyday devices, such as smartphones and wearables, to understand behavioral and physiological patterns. By analyzing data like typing speed, app usage, movement patterns, and even heart rate variability, digital phenotyping provides a window into an individual's mental and physical state. This cutting-edge approach allows us to detect early warning signs of burnout, such as increased stress levels, disrupted sleep patterns, or reduced physical activity.</p>
+            <p>For HR professionals, digital phenotyping is a game changer. It enables proactive interventions by identifying at-risk employees before burnout significantly impacts their performance or well-being. With Health+, digital phenotyping works in the background, integrating seamlessly into employees' lives without being intrusive. The result? A data-driven, employee-centered approach to managing workplace wellness that prioritizes prevention over reaction.</p>
+        </div>
+
+        <!-- Section 3: Passive Data Streams -->
+        <div class="section-card">
+            <i class="fas fa-database" style="color: #28A745;"></i>
+            <h2>What Are Passive Data Streams and How Are We Collecting Them?</h2>
+            <p>Passive data streams are unobtrusively collected metrics that provide insights without requiring active input from employees. These include step counts, hours of sleep, heart rate, heart rate variability, time spent at home, and even the number of locations visited. These data points are gathered automatically through the Health+ app, which integrates seamlessly with wearables and smartphone sensors to ensure a frictionless user experience.</p>
+            <p>By leveraging passive data, Health+ reduces the burden on employees while maximizing the accuracy and granularity of the insights collected. This approach eliminates gaps caused by incomplete or inaccurate self-reporting, providing HR teams with a robust foundation for decision-making. With Health+, your organization can uncover hidden trends and correlations, empowering you to foster a healthier, more productive workforce.</p>
+        </div>
+
+        <div class="data-categories">
+            <h2>Data Categories</h2>
+            <div class="categories-row">
+                <!-- Passive Data Card -->
+                <div class="category-card">
+                    <i class="fas fa-walking" style="color: #007BFF;"></i>
+                    <h3>Passive Data</h3>
+                    <p>Collected automatically through wearables and smartphones, passive data includes metrics like step count, hours of sleep, heart rate, and time spent at home. These streams provide a baseline understanding of daily habits and wellness trends.</p>
+                </div>
+        
+                <!-- Active Data Card -->
+                <div class="category-card">
+                    <i class="fas fa-heart" style="color: #FF5733;"></i>
+                    <h3>Active Data</h3>
+                    <p>Self-reported metrics such as stress levels and top sources of stress. Active data captures the emotional and psychological aspects of employee well-being, offering insights into individual challenges and stressors.</p>
+                </div>
+        
+                <!-- Workplace App Data Card -->
+                <div class="category-card">
+                    <i class="fas fa-briefcase" style="color: #28A745;"></i>
+                    <h3>Workplace App Data</h3>
+                    <p>Metrics like calendar meetings, meeting durations, and time spent on collaboration apps help analyze productivity and potential stressors within the workplace environment.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section-card">
+            <h1>List of Metrics</h1>
+            <ul class="metric-list">
+                <li>
+                    <i class="fas fa-walking"></i>
+                    <div>
+                        <h3>Step Count</h3>
+                        <p>Tracks the number of steps an individual takes each day to measure physical activity levels.</p>
+                    </div>
+                </li>
+                <li>
+                    <i class="fas fa-dumbbell"></i>
+                    <div>
+                        <h3>Physical Activity</h3>
+                        <p>Estimates calories burned through movement to gauge overall physical activity.</p>
+                    </div>
+                </li>
+                <li>
+                    <i class="fas fa-heartbeat"></i>
+                    <div>
+                        <h3>Heart Rate</h3>
+                        <p>Measures the beats per minute to monitor cardiovascular activity.</p>
+                    </div>
+                </li>
+                <li>
+                    <i class="fas fa-chart-line"></i>
+                    <div>
+                        <h3>Heart Rate Variability</h3>
+                        <p>Tracks variations in time between heartbeats, indicating stress levels and recovery.</p>
+                    </div>
+                </li>
+                <li>
+                    <i class="fas fa-bed"></i>
+                    <div>
+                        <h3>Hours of Sleep</h3>
+                        <p>Monitors nightly sleep duration to assess rest and recovery.</p>
+                    </div>
+                </li>
+                <li>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h3>Number of Locations Visited</h3>
+                        <p>Counts the number of unique places visited each day to understand mobility.</p>
+                    </div>
+                </li>
+                <li>
+                    <i class="fas fa-home"></i>
+                    <div>
+                        <h3>Time Spent at Home</h3>
+                        <p>Tracks the amount of time spent at home to identify work-life balance patterns.</p>
+                    </div>
+                </li>
+                <li>
+                    <i class="fas fa-calendar-alt"></i>
+                    <div>
+                        <h3>Number of Calendar Meetings</h3>
+                        <p>Counts daily meetings scheduled in the workplace to analyze workload.</p>
+                    </div>
+                </li>
+                <li>
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h3>Meeting Duration</h3>
+                        <p>Calculates the average length of workplace meetings to assess time spent in discussions.</p>
+                    </div>
+                </li>
+                <li>
+                    <i class="fas fa-laptop"></i>
+                    <div>
+                        <h3>Hours on Microsoft Teams</h3>
+                        <p>Tracks the total time spent on Microsoft Teams to understand digital collaboration levels.</p>
+                    </div>
+                </li>
+                <li>
+                    <i class="fas fa-tachometer-alt"></i>
+                    <div>
+                        <h3>Stress Level</h3>
+                        <p>Self-reported metric indicating emotional and psychological stress on a scale of 1 to 10.</p>
+                    </div>
+                </li>
+                <li>
+                    <i class="fas fa-user-friends"></i>
+                    <div>
+                        <h3>Top Sources of Stress</h3>
+                        <p>Identifies primary stressors such as deadlines, relationships, or health issues.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+
+    </div>
+</body>
+</html>

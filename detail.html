@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Organizational Data Visualization</title>
+    <link rel="stylesheet" href="styles2.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://kit.fontawesome.com/ce7793d2ad.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">health<span style="color: var(--primary-color);">+</span></div>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Generate AI Report</a></li>
+                <li><a href="/detail.html">Visual Mode</a></li>
+                <li><a href="/our-data.html">Our Data</a></li>
+                <li><a href="https://healthplus.global" class="join-button">Back to Main Site</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i>
+        </div>
+    </header>
+    <div id="wellness-summary-container">
+        <form id="wellness-form">
+            <label for="month-select">Select Month:</label>
+            <select id="month-select">
+                <option value="January 2024">January 2024</option>
+                <option value="February 2024">February 2024</option>
+                <option value="March 2024">March 2024</option>
+                <option value="April 2024">April 2024</option>
+                <option value="May 2024">May 2024</option>
+                <option value="June 2024">June 2024</option>
+            </select>
+            <button type="button" onclick="updateWellnessSummary()">Update</button>
+        </form>
+        <div id="summary-card" class="card">
+            <!-- Summary content will be dynamically populated -->
+        </div>
+        
+        
+    </div>
+
+    <div class="burnout-costs">
+        <div style="display: flex; flex-direction: row; width: 100%; justify-content: center; gap: 10px; align-items: center;">
+        
+            <h2>Annual Savings Projections</h2>
+            <div class="info-icon">
+                <i class="fas fa-question-circle"></i>
+                <div class="info-bubble">
+                    Burnout and mental health increases turnover costs, absenteeism costs, medical claims costs on an annual basis, this is how much it costs your organization, and our AI has calculated how much you can potentially save if you implement the suggested burnout-prevention and health practices.
+                </div>
+            </div>
+
+        </div>
+
+        <div class="cost-cards">
+            <div class="cost-card">
+                <i class="fas fa-briefcase" style="color: #007BFF;"></i>
+                <h3>Turnover Costs</h3>
+                <p>$10,000,000</p>
+            </div>
+            <div class="cost-card">
+                <i class="fas fa-user-slash" style="color: #FF5733;"></i>
+                <h3>Absenteeism Costs</h3>
+                <p>$6,000,000</p>
+            </div>
+            <div class="cost-card">
+                <i class="fas fa-file-medical" style="color: #28A745;"></i>
+                <h3>Medical Claims Costs</h3>
+                <p>$2,600,000</p>
+            </div>
+        </div>
+        <div class="savings-card">
+            <i class="fas fa-piggy-bank" style="color: #FFC107;"></i>
+            <h3>Potential Savings</h3>
+            <p>You could save approximately <strong>$1,860,000</strong> (10% savings) this year by taking the suggested actions to combat burnout.</p>
+            <div style="text-align: center; width: 100%; display: flex; align-items: center; justify-content: center;"><a style="text-decoration: none;" href="/index.html"><button>Generate Report To Learn How</button></a></div>
+        </div>
+    </div>
+    
+
+    <div style="display: flex; flex-direction: row; width: 100%; justify-content: center; gap: 10px; align-items: center;">
+        
+            <h2>Visualize your Data</h2>
+            <div class="info-icon">
+                <i class="fas fa-question-circle"></i>
+                <div class="info-bubble">
+                    You can visualize data on an Enterprise level or an Employee level. 
+                    1. Click one of the blue buttons, 
+                    2. Select start date and end date for data (we recommend a month or less) 
+                    3. select your filters, such as by role or gender, 
+                    4. select bar or line graph 
+                    5. Click generate graph
+
+                </div>
+            </div>
+
+        </div>
+    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width:100%; gap: 10px;">
+         <!-- Toggleable Company Data -->
+        <div class="toggle-section">
+            <button class="toggle-button" onclick="toggleSection('company-section')">Visualize Enterprise Data</button>
+            <div id="company-section" class="toggle-content">
+                <form id="company-form">
+                    <label for="start-month">Start Month:</label>
+                    <select id="start-month">
+                        <option>January 2024</option>
+                        <option>February 2024</option>
+                        <option>March 2024</option>
+                        <option>April 2024</option>
+                        <option>May 2024</option>
+                        <option>June 2024</option>
+                    </select>
+        
+                    <label for="end-month">End Month:</label>
+                    <select id="end-month">
+                        <option>January 2024</option>
+                        <option>February 2024</option>
+                        <option>March 2024</option>
+                        <option>April 2024</option>
+                        <option>May 2024</option>
+                        <option>June 2024</option>
+                    </select>
+        
+                    <label for="metric-company">Metric:</label>
+                    <select id="metric-company">
+                        <option>Health+ App</option>
+                        <option>Wellness programs</option>
+                        <option>EAP</option>
+                        <option>Turnover rate</option>
+                        <option>Absenteeism rate</option>
+                        <option>Mental health claims</option>
+                        <option>Health insurance claims related to stress</option>
+                    </select>
+        
+                    <label for="graph-type-company">Graph Type:</label>
+                    <select id="graph-type-company">
+                        <option>Bar</option>
+                        <option>Line</option>
+                    </select>
+        
+                    <button type="button" onclick="generateCompanyGraph()">Generate Graph</button>
+                </form>
+                <canvas id="company-graph"></canvas>
+            </div>
+        </div>
+
+        <!-- Toggleable Employee Data -->
+        <div class="toggle-section">
+            <button class="toggle-button" onclick="toggleSection('employee-section')">Visualize Employee Data</button>
+            <div id="employee-section" class="toggle-content">
+                <form id="metric-form">
+                    <div>
+                        <h3>First Dataset</h3>
+                        <label for="start-day-metric">Start Day:</label>
+                        <input type="date" id="start-day-metric" value="2024-01-01">
+                        
+                        <label for="end-day-metric">End Day:</label>
+                        <input type="date" id="end-day-metric" value="2024-06-30">
+                        
+                        <label for="filter-gender-metric">Gender:</label>
+                        <select id="filter-gender-metric" class="dropdown">
+                            <option value="all">All</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                        
+                        <label for="filter-race-metric">Race:</label>
+                        <select id="filter-race-metric" class="dropdown">
+                            <option value="all">All</option>
+                            <option value="white">White</option>
+                            <option value="black">Black</option>
+                            <option value="hispanic">Hispanic</option>
+                            <option value="native american">Native American</option>
+                            <option value="asian">Asian</option>
+                        </select>
+
+                        <label for="filter-department-metric">Department:</label>
+                        <select id="filter-department-metric" class="dropdown">
+                            <option value="all">All</option>
+                            <option value="Corporate Finance">Corporate Finance</option>
+                            <option value="M&A">M&A</option>
+                            <option value="Asset Management">Asset Management</option>
+                            <option value="Research">Research</option>
+                            <option value="Sales">Sales</option>
+                        </select>
+
+                        <label for="filter-role-metric">Role:</label>
+                        <select id="filter-role-metric" class="dropdown">
+                            <option value="all">All</option>
+                            <option value="Junior">Junior</option>
+                            <option value="Mid Level">Mid Level</option>
+                            <option value="Senior">Senior</option>
+                        </select>
+                        
+                        <label for="metric-select">Metric:</label>
+                        <select id="metric-select" class="dropdown">
+                            <option value="hours_sleep">Hours of Sleep</option>
+                            <option value="stress_level">Stress Level</option>
+                            <!-- Add other metrics here -->
+                        </select>
+                    </div>
+
+                    <div id="second-dataset" style="display: none;">
+                        <h3>Second Dataset</h3>
+                        <label for="filter-gender-metric-2">Gender:</label>
+                        <select id="filter-gender-metric-2" class="dropdown">
+                            <option value="all">All</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                        
+                        <label for="filter-race-metric-2">Race:</label>
+                        <select id="filter-race-metric-2" class="dropdown">
+                            <option value="all">All</option>
+                            <option value="white">White</option>
+                            <option value="black">Black</option>
+                            <option value="hispanic">Hispanic</option>
+                            <option value="native american">Native American</option>
+                            <option value="asian">Asian</option>
+                        </select>
+
+                        <label for="filter-department-metric-2">Department:</label>
+                        <select id="filter-department-metric-2" class="dropdown">
+                            <option value="all">All</option>
+                            <option value="Corporate Finance">Corporate Finance</option>
+                            <option value="M&A">M&A</option>
+                            <option value="Asset Management">Asset Management</option>
+                            <option value="Research">Research</option>
+                            <option value="Sales">Sales</option>
+                        </select>
+
+                        <label for="filter-role-metric-2">Role:</label>
+                        <select id="filter-role-metric-2" class="dropdown">
+                            <option value="all">All</option>
+                            <option value="Junior">Junior</option>
+                            <option value="Mid Level">Mid Level</option>
+                            <option value="Senior">Senior</option>
+                        </select>
+
+                        <label for="metric-select-2">Metric:</label>
+                        <select id="metric-select-2" class="dropdown">
+                            <option value="hours_sleep">Hours of Sleep</option>
+                            <option value="stress_level">Stress Level</option>
+                            <!-- Add other metrics here -->
+                        </select>
+                    </div>
+
+                    <label for="graph-type-metric">Graph Type:</label>
+                    <select id="graph-type-metric" class="dropdown">
+                        <option value="bar">Bar</option>
+                        <option value="line">Line</option>
+                    </select>
+
+                    <button type="button" onclick="toggleCompareMode()">Toggle Compare Mode</button>
+                    <button type="button" onclick="generateMetricGraph()">Generate Graph</button>
+                </form>
+                <canvas id="metric-graph"></canvas>
+                        
+            
+            </div>
+        </div>
+
+        <!-- Toggleable Root Causes of Stress -->
+        <div class="toggle-section">
+            <button class="toggle-button" onclick="toggleSection('stress-section')">Visualize Root Causes of Stress from Employee Sentiment Analysis</button>
+            <div id="stress-section" class="toggle-content">
+                <form id="stress-form">
+                    <label for="start-day-stress">Start Day:</label>
+                    <input type="date" id="start-day-stress" value="2024-01-01">
+                
+                    <label for="end-day-stress">End Day:</label>
+                    <input type="date" id="end-day-stress" value="2024-06-30">
+                
+                    <label for="filter-gender-stress">Filter by Gender:</label>
+                    <select id="filter-gender-stress">
+                        <option value="all">All</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                
+                    <label for="filter-race-stress">Filter by Race:</label>
+                    <select id="filter-race-stress">
+                        <option value="all">All</option>
+                        <option value="white">White</option>
+                        <option value="black">Black</option>
+                        <option value="hispanic">Hispanic</option>
+                        <option value="native american">Native American</option>
+                        <option value="asian">Asian</option>
+                    </select>
+                
+                    <label for="filter-department-stress">Filter by Department:</label>
+                    <select id="filter-department-stress">
+                        <option value="all">All</option>
+                        <option value="Corporate Finance">Corporate Finance</option>
+                        <option value="M&A">M&A</option>
+                        <option value="Asset Management">Asset Management</option>
+                        <option value="Research">Research</option>
+                        <option value="Sales">Sales</option>
+                    </select>
+                
+                    <label for="filter-role-stress">Filter by Role:</label>
+                    <select id="filter-role-stress">
+                        <option value="all">All</option>
+                        <option value="Junior">Junior</option>
+                        <option value="Mid Level">Mid Level</option>
+                        <option value="Senior">Senior</option>
+                    </select>
+                
+                    <button type="button" onclick="generateStressGraph()">Generate Graph</button>
+                </form>
+                <canvas id="stress-graph"></canvas>
+            </div>
+        </div>
+
+    </div>
+    
+   
+
+    <div id="organization-info">
+        <h2>Organization Info</h2>
+        <div id="org-details">
+            <!-- This section will be dynamically populated -->
+        </div>
+    </div>
+    
+
+    <script src="scripts.js"></script>
+</body>
+</html>

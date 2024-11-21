@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellness Report Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/ce7793d2ad.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">health<span style="color: var(--primary-color);">+</span></div>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Generate AI Report</a></li>
+                <li><a href="/detail.html">Visual Mode</a></li>
+                <li><a href="/our-data.html">Our Data</a></li>
+                <li><a href="https://healthplus.global" class="join-button">Back to Main Site</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>AI-Powered Wellness Report for HR & Benefits Professionals</h1>
+        
+        <p style="text-align: center;">
+            Short on time or overwhelmed by wellness data?  Our AI makes it simple!  
+            Just click <strong>'Generate Report'</strong> to receive an AI-powered summary of your organization’s wellness data,  
+            including <span style="color: #FF5733;">actionable insights</span> and <span style="color: #d8a200;">tailored recommendations</span> to help your team thrive.
+        </p>
+        
+        <div class="date-picker">
+            <label for="month-select">Select Month:</label>
+            <select id="month-select">
+                <option value="January">January</option>
+                <option value="February">February</option>
+                <option value="March">March</option>
+                <option value="April">April</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+            </select>
+        </div>
+        <div style="display: flex; align-items: center; justify-content: center; width: 100%;">
+            <button id="generate-report">Generate Report</button>
+        </div>
+        <div id="report-section">
+            <h2>Report:</h2>
+            <pre id="report-output">Your report will appear here...</pre>
+            <div style="display: flex; flex-direction: row; align-items: center; justify-content: center; width:100%; gap: 10px;">
+                <button id="download-pdf" style="display: none;">Download Report as PDF</button>
+                <a href="detail.html"><button id="visual" style="display: none;">Try our visual mode!</button></a>
+            </div>
+        </div>
+
+        <div class="report-features">
+            <h2>What’s Included in Your Wellness Report?</h2>
+            <div class="features-row">
+                <div class="feature-item">
+                    <i class="fas fa-user-check" style="color: #007BFF;"></i>
+                    <h3>Employee Wellness Insights</h3>
+                    <p>Understand trends in stress levels, sleep quality, and activity rates across your team.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-chart-pie" style="color: #28A745;"></i>
+                    <h3>Actionable Recommendations</h3>
+                    <p>Receive step-by-step actions to improve organizational mental and physical health.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-database" style="color: #FF5733;"></i>
+                    <h3>Comprehensive Data Streams</h3>
+                    <p>Analyze metrics like turnover costs, absenteeism, heart rate variability, and more.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-lightbulb" style="color: #FFC107;"></i>
+                    <h3>AI-Powered Summaries</h3>
+                    <p>Let our AI distill complex data into meaningful, easy-to-digest insights for your organization.</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
+</body>
+</html>
